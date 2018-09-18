@@ -1,0 +1,8 @@
+var exp=require("express")
+var app=exp()
+var bdy=require("body-parser")
+app.use(bdy.json())
+var newapp=require("./API/CrudOp")
+app.use("/ins",newapp)
+app.listen(8080)
+console.log("Running 8080")
