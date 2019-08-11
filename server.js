@@ -1,5 +1,6 @@
 const exp=require('express');
 const cors=require('cors');
+var path=require('path');
 dbconect=require('./backend/config/configuration/config.js')
 const bp=require('body-parser')
 const multipart = require('connect-multiparty')
@@ -15,7 +16,10 @@ const multipartMiddleware = multipart({
 });
 
 app.use(cors())
-
+app.use(exp.static(__dirname + '/dist/routing'));
+app.get('/*',(req,res)=>{
+    res.sendFile(path.join(__dirname + '/dist/routing/index.html'));
+})
 app.post('/post_file_url', multipartMiddleware, (req, res) => {
     image=req.files.uploads[0].path;
    
@@ -34,6 +38,6 @@ app.post('/post_file_url', multipartMiddleware, (req, res) => {
 });
 
 app.use('/',route)
-app.listen(port,()=>{
-    console.log("On 3000")
-});
+app.listen(port),
+app.use(exp.static(__dirname));
+console.log("On 3000")
