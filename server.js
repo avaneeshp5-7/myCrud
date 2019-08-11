@@ -14,7 +14,7 @@ const multipartMiddleware = multipart({
     uploadDir: './src/assets/uploads',
 
 });
-
+app.use('/',route)
 app.use(cors())
 app.use(exp.static(__dirname + '/dist/routing'));
 app.get('/*',(req,res)=>{
@@ -36,8 +36,6 @@ app.post('/post_file_url', multipartMiddleware, (req, res) => {
    }
    })
 });
-
-app.use('/',route)
 app.listen(port),
 app.use(exp.static(__dirname));
 console.log("On 3000")
