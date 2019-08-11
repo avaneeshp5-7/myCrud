@@ -1,0 +1,7 @@
+<div class="container">
+        <div class="col-md-12 text-center">
+            <span *ngFor="let img of gallery">
+                <img src="../../assets/uploads/{{img.image}}" class="set_image" (click)="getSingleImage(img.image)">
+            </span>
+        </div>
+</div>

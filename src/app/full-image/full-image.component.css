@@ -1,0 +1,10 @@
+.set_image{
+    width: 517px;
+    height: 408px;
+    border: 1px solid gainsboro;
+    margin-top: 16px;
+}
+.set_image:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}

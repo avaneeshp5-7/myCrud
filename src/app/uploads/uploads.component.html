@@ -1,0 +1,16 @@
+<div class="container-fluid">
+     <div class="row mrg">
+         <div class="col-md-3">
+                <div>
+                     <form enctype="multipart/form-data">
+                          <input  (change)="fileChange($event)" class="form-control"  type="file" name="file">   
+                        </form>  
+                    </div> 
+         </div>
+         <div class="col-md-3">
+                <div class="btnmrg">
+                        <span  class="btn btn-dark"  (click)="upload()"  id="btnUpload">Upload</span> 
+                  </div>
+         </div>
+     </div>   
+</div>

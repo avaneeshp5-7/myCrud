@@ -1,31 +1,6 @@
-
-<h2>Add</h2>
-<input type="text" [(ngModel)]="n1" placeholder="Username"><br><br>
-<input type="text" [(ngModel)]="n2" placeholder="Password"><br><br>
-<input type="button" value="Insert" (click)="funAdd()">
-<br>
-<h2>Get</h2>
-<input type="button" value="GetData" (click)="getData()"><br><br>
-<table border="1">
-  <tr>
-      <th>Id</th>
-    <th>Uname</th>
-    <th>Password</th>
-    <th>Update</th>
-    <th>Delete</th>
-  </tr>
-  <tr *ngFor="let x of mydata">
-      <td *ngIf="x._id!=gloid; else temp">{{x._id}}</td>
-      <td *ngIf="x._id!=gloid">{{x.username}}</td>
-      <td *ngIf="x._id!=gloid">{{x.password}}</td>
-     <td *ngIf="x._id!=gloid"><input type="button" value="Update" (click)="funUpdate(x)">
-     <td *ngIf="x._id!=gloid"><input type="button" value="Delete" (click)="DataDelete(x)"></td>
-    </tr>
-</table>
-<ng-template #temp>
-  <td>{{gloid}}</td>
-  <td><input type="text" [(ngModel)]="t1"></td>
-  <td><input type="text" [(ngModel)]="t2"></td>
-  <td><input type="button" value="Save" (click)="FunSave()">
-  <td><input type="button" value="Cancel" (click)="gloid=0"></td>
-</ng-template>
+<app-navbar>
+</app-navbar>
+<router-outlet>
+</router-outlet>
+<app-footer>
+</app-footer>
