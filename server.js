@@ -5,7 +5,7 @@ dbconect=require('./backend/config/configuration/config.js')
 const bp=require('body-parser')
 const multipart = require('connect-multiparty')
 const route=require('./backend/Router/first.js')
-const port=process.env.PORT || 3000
+var port=process.env.PORT || 3000
 const app=exp();
 app.use(bp.json())
 app.use(bp.urlencoded({extended:true}))
