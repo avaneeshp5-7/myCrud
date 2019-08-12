@@ -2,5 +2,8 @@
     
     "/*":{
         "target":"http://localhost:3000"
+    },
+    "/gallery_url/*":{
+        "target":"http://localhost:3000"
     }
 }
