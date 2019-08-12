@@ -14,8 +14,9 @@ const multipartMiddleware = multipart({
     uploadDir: './src/assets/uploads',
 
 });
-app.use('/',route)
+
 app.use(cors())
+app.use('/',route)
 app.use(exp.static(__dirname + '/dist/routing'));
 app.get('/*',(req,res)=>{
     res.sendFile(path.join(__dirname + '/dist/routing/index.html'));
