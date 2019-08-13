@@ -14,5 +14,10 @@ color: rgb(175, 107, 240);
 font-weight: bold
 }
 .sp2{
-color: rgb(102, 248, 4)
+color: rgb(102, 248, 4);
+cursor: pointer;
+}
+.sp2:hover{
+     color: rgb(250, 102, 17);
+     font-size: 18px
 }

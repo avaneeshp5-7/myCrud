@@ -22,3 +22,11 @@ section {
 .poss{
     margin: 10px;
 }
+.ank{
+    color: rgb(185, 134, 233);
+}
+.ank:hover{
+    text-decoration: none;
+    color: rgb(69, 163, 245);
+    font: 18px sans-serif;
+}
