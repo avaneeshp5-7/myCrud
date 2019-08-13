@@ -18,9 +18,11 @@ import { AuthService} from "./auth.service";
 import { from } from 'rxjs';
 // import { environment } from 'src/environments/environment';
 import { environment } from '../environments/environment';
+import { MembersComponent } from './members/members.component';
 const route=[
   {path:'',component:LandingPageComponent},
   {path:'uploads/image/nuss',component:UploadsComponent,canActivate: [AuthService]},
+  {path:'related/members/nuss',component:MembersComponent,canActivate: [AuthService]},
   {path:'contact/nuss',component:ContactComponent},
   {path:'gallery/pic/nuss',component:GalleryComponent},
   {path:'singleImage/pic/nuss',component:FullImageComponent},
@@ -37,7 +39,8 @@ var router=RouterModule.forRoot(route)
     FooterComponent,
     LandingPageComponent,
     FullImageComponent,
-    MoreImageComponent
+    MoreImageComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule,RouterModule,router, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
