@@ -21,8 +21,11 @@ import { environment } from '../environments/environment';
 import { MembersComponent } from './members/members.component';
 const route=[
   {path:'',component:LandingPageComponent},
-  {path:'uploads/image/nuss',component:UploadsComponent,canActivate: [AuthService]},
-  {path:'related/members/nuss',component:MembersComponent,canActivate: [AuthService]},
+  {path:'uploads/image/nuss',component:UploadsComponent},
+  //, canActivate: [AuthService]
+
+  {path:'related/members/nuss',component:MembersComponent},
+  // ,canActivate: [AuthService]},
   {path:'contact/nuss',component:ContactComponent},
   {path:'gallery/pic/nuss',component:GalleryComponent},
   {path:'singleImage/pic/nuss',component:FullImageComponent},
