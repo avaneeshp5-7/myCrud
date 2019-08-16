@@ -4,3 +4,6 @@
 .btnmrg{
     margin-top: 1px;
 }
+input{
+    border-radius: 0px;
+}

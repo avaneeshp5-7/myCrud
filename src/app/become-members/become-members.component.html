@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+       <div class="col-md-6">
+          <div style="margin-top:80px" class="reg_forms">
+              <div  *ngIf="errmsg" class="errdive" >{{errmsg}}</div><br>
+              <h4 class="text-center" 
+              style="color: rgb(15, 228, 61);
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-weight: bold">Welcome To Membership Portal
+              </h4>
+              <form [formGroup]="registerForm" (ngSubmit)="mySubmit()" class="formset">
+                <input type="text" class="form-control ipt" formControlName="first_name"
+                  [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" placeholder="First Name">
+                <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                </div>
+                <br>
+                
+                <input type="text" class="form-control ipt" formControlName="last_name"
+                  [ngClass]="{'is-invalid':submitted && f.last_name.errors}" placeholder="Last_name">
+                <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                </div><br>
+
+
+                 <select class="form-control ipt" formControlName="memebership" [ngClass]="{'is-invalid':submitted && f.memebership.errors}">
+                     <option value="">----Select----</option>
+                     <option>Support Worker</option>
+                     <option>Daily Worker</option>
+                 </select>
+                
+              <div *ngIf="submitted && f.memebership.errors" class="invalid-feedback">
+                <div *ngIf="f.memebership.errors.memebership"></div>
+              </div>
+              <br>
+
+                <input type="email" class="form-control ipt" formControlName="Email"
+                  [ngClass]="{'is-invalid':submitted && f.Email.errors}" placeholder="email">
+                <div *ngIf="submitted && f.Email.errors ipt" class="invalid-feedback">
+                  <div *ngIf="f.Email.errors.email">Not a proper email address</div>
+                </div><br>
+                <input type="text" class="form-control ipt" formControlName="contact"
+                [ngClass]="{'is-invalid':submitted && f.contact.errors}" placeholder="Contact">
+              <div *ngIf="submitted && f.contact.errors" class="invalid-feedback">
+                <div *ngIf="f.contact.errors.minlength">Minimum 10 digit</div>
+                <div *ngIf="f.contact.errors.pattern">Only number is allow</div>
+                <div *ngIf="f.contact.errors.maxlength">Maximum 10 digit</div>
+              </div><br>
+                <input type="password" class="form-control ipt" formControlName="Password"
+                  [ngClass]="{'is-invalid':submitted && f.Password.errors}" placeholder="password">
+                <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                  <div *ngIf="f.Password.errors.minlength">Minimum 8 digit</div>
+                  <div *ngIf="f.Password.errors.maxlength">Maxmum 16 digit</div>
+                </div>
+                <br>
+                <input type="password" class="form-control ipt" formControlName="confirmPassword"
+                  [ngClass]="{'is-invalid':submitted && f.confirmPassword.errors}" placeholder="Confirm password">
+                <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                    <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                </div>
+                <br>
+                <input  (change)="fileChange($event)" class="form-control ipt"  type="file" name="file">   
+                <br>
+                <button type="submit" [disabled]="!registerForm.valid"  class="btn btn-primary bbttnn">Submit</button><br>
+              </form><br>
+            </div>
+       </div>
+     </div>
+  </div>
+  
+  
+  

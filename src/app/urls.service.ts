@@ -16,4 +16,10 @@ export class UrlsService {
     get_Single(data){
       return this.http_s.post(URL.get_single_image,data);
     }
+    Member_File(data){
+      return this.http_s.post(URL.profile_post,data);
+    }
+    member_Add(data){
+      return this.http_s.post(URL.members_post,data);
+    }
 }
