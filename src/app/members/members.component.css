@@ -1,3 +1,11 @@
 .div_member{
     margin-top: 10px;
 }
+a:hover{
+    color: aqua
+}
+.sp:hover{
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(128, 228, 228);
+}

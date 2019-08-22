@@ -5,6 +5,7 @@ export const URL={
     get_file:server + '/gallery_url',
     get_single_image:server + '/single_image_url',
     profile_post:server + '/member_image',
-    members_post:server + '/add_members_nuss'
+    members_post:server + '/add_members_nuss',
+    members_get:server + '/members_gets_nuss'
 }
 

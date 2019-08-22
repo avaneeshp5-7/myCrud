@@ -22,4 +22,7 @@ export class UrlsService {
     member_Add(data){
       return this.http_s.post(URL.members_post,data);
     }
+    member_Get(){
+      return this.http_s.get(URL.members_get);
+    }
 }

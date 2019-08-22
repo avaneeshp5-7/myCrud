@@ -15,5 +15,6 @@ route.get('/gallery_url',cntrl.getGallery);
 route.post('/single_image_url',cntrl.getSingle);
 route.post('/member_image',multipartMiddleware,cntrl.memberImage);
 route.post('/add_members_nuss',cntrl.addMembers);
+route.get('/members_gets_nuss',cntrl.getMembers);
 
 module.exports=route;

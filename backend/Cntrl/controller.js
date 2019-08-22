@@ -86,3 +86,18 @@ exports.addMembers=(req,res)=>{
         }
     })
 };
+exports.getMembers=(req,res)=>{
+    connect.Our_members.find().sort({ _id: -1 }).limit(4, function (e, result){
+      if(e){
+          res.send({
+              success:false,
+              message:"Fail !"
+          })
+      }else{
+          res.send({
+              success:true,
+              result:result
+          })
+      }
+    })
+}
