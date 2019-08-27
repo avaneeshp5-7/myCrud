@@ -1,5 +1,5 @@
-// var server='http://localhost:3000';
- var server='https://navyuvak-seva-samiti.herokuapp.com';
+var server='http://localhost:3000';
+//  var server='https://navyuvak-seva-samiti.herokuapp.com';
 export const URL={
     post_file:server + '/post_file_url',
     get_file:server + '/gallery_url',

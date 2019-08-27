@@ -9,6 +9,7 @@ export class MembersComponent implements OnInit {
 more:boolean=false;
 clicks:boolean=true;
 skip:boolean=false;
+memdet:boolean=true
 members:any;
 memb_more:any;
   constructor(private servicess: UrlsService) { }
@@ -21,6 +22,7 @@ memb_more:any;
   More(memb){
     this.memb_more=memb
     this.more=true;
+    this.memdet=false
     this.clicks=false
     this.skip=true
   }
@@ -28,5 +30,6 @@ memb_more:any;
     this.skip=false  
     this.more=false;
     this.clicks=true
+    this.memdet=true
   }
 }

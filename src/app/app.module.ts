@@ -20,6 +20,7 @@ import { from } from 'rxjs';
 // import { environment } from 'src/environments/environment';
 import { environment } from '../environments/environment';
 import { MembersComponent } from './members/members.component';
+import { HomepageComponent } from './homepage/homepage.component';
 const route=[
   {path:'',component:LandingPageComponent},
   {path:'uploads/image/nuss',component:UploadsComponent,canActivate: [AuthService]},
@@ -43,7 +44,8 @@ var router=RouterModule.forRoot(route)
     LandingPageComponent,
     FullImageComponent,
     MoreImageComponent,
-    MembersComponent
+    MembersComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,ReactiveFormsModule,FormsModule,HttpClientModule,RouterModule,router, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

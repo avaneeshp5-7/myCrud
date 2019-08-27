@@ -50,7 +50,7 @@ export class BecomeMembersComponent implements OnInit {
     var data = (this.registerForm.value)
     this.servicess.member_Add(data).subscribe(dt=>{
     alert(dt['message'])
-    window.location.href="/become/member/nuss";
+    // window.location.href="/become/member/nuss";
     })
   }
 }
