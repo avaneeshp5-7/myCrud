@@ -1,20 +1,19 @@
-const express=require('express');
-const route=express.Router();
+const express = require('express');
+const route = express.Router();
 const multipart = require('connect-multiparty')
 const multipartMiddleware = multipart({
     uploadDir: './src/assets/uploads',
-
 });
-const bodyp=require('body-parser')
-const cors=require('cors')
+const bodyp = require('body-parser')
+const cors = require('cors')
 // route.use(bodyp.json())
-route.use(bodyp.urlencoded({extended:true}))
-const cntrl=require('../Cntrl/controller.js')
- route.use(cors())
-route.get('/gallery_url',cntrl.getGallery);
-route.post('/single_image_url',cntrl.getSingle);
-route.post('/member_image',multipartMiddleware,cntrl.memberImage);
-route.post('/add_members_nuss',cntrl.addMembers);
-route.get('/members_gets_nuss',cntrl.getMembers);
+route.use(bodyp.urlencoded({ extended: true }))
+const cntrl = require('../Cntrl/controller.js')
+route.use(cors())
+route.get('/gallery_url', cntrl.getGallery);
+route.post('/single_image_url', cntrl.getSingle);
+route.post('/member_image', multipartMiddleware, cntrl.memberImage);
+route.post('/add_members_nuss', cntrl.addMembers);
+route.get('/members_gets_nuss', cntrl.getMembers);
 
-module.exports=route;
+module.exports = route;

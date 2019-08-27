@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router' 
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor( private route:Router) { }
-
+  constructor(private route: Router) { }
   ngOnInit() {
   }
-  moreImg(){
-  this.route.navigateByUrl("/gallery/pic/nuss")
+  moreImg() {
+    this.route.navigateByUrl("/gallery/pic/nuss")
   }
 }
