@@ -7,3 +7,17 @@
     border-radius: 3px;
     cursor: pointer;
 }
+
+
+
+    @media(max-width:361px){
+        .set_image{
+            border: 2px solid rgba(190, 190, 190, 0.972);
+            background-color: rgb(229, 226, 226);
+            margin: 7px;
+            margin: 2px;
+            width: 106px;
+            /* border-radius: 99px; */
+            cursor: pointer;
+        }
+       }
